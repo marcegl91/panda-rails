@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.6'
 gem 'devise_token_auth', '~> 1.1'
+gem 'active_model_serializers', '~> 0.10.9'
+gem 'wor-paginate', '~> 0.1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
