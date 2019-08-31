@@ -25,4 +25,4 @@ User.create(email: 'test4@test.com', nickname: 'user4', password: 'testtest', la
 User.create(email: 'test5@test.com', nickname: 'user5', password: 'testtest', latitude: -34.562809, longitude: -58.481830)
 
 Donation.create(name: 'A donation', description: 'Some text about that donation',
-                requester: User.first, offerer: User.second, state: 0)
+                requester: User.first, offerer: User.second, state: 0, category: Category.first)

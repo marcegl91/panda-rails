@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_042256) do
+ActiveRecord::Schema.define(version: 2019_08_31_060901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2019_08_31_042256) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "state"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_donations_on_category_id"
     t.index ["offerer_id"], name: "index_donations_on_offerer_id"
     t.index ["requester_id"], name: "index_donations_on_requester_id"
   end
@@ -76,5 +78,6 @@ ActiveRecord::Schema.define(version: 2019_08_31_042256) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "donations", "categories"
   add_foreign_key "ratings", "users"
 end

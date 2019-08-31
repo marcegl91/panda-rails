@@ -11,7 +11,12 @@ Rails.application.routes.draw do
         end
       end
 
-      resources :categories, only: [:index]
+      resources :categories, only: [:index] do
+        member do
+          get 'nearby-request-donations'
+          get 'nearby-offer-donations'
+        end
+      end
       resources :donations, only: [:index, :show, :create]
     end
   end
