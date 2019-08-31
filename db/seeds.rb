@@ -12,8 +12,8 @@
   Category.create(name: x)
 end
 
-User.create(email: 'test@test.com', password: 'testtest')
-User.create(email: 'test1@test.com', password: 'testtest')
+User.create(email: 'test@test.com', nickname: 'user1', password: 'testtest')
+User.create(email: 'test1@test.com', nickname: 'user2', password: 'testtest')
 
 Donation.create(name: 'A donation', description: 'Some text about that donation',
                 requester: User.first, offerer: User.second, state: 0)
