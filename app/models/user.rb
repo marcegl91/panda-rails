@@ -8,4 +8,10 @@ class User < ApplicationRecord
 
   has_many :requests, class_name: 'Donation', foreign_key: 'requester_id'
   has_many :offers, class_name: 'Donation', foreign_key: 'offerer_id'
+
+  has_many :ratings
+
+  def score
+    ratings.empty? ? 0 : ratings.average('score').round
+  end
 end
