@@ -24,7 +24,7 @@ module Api
       private
 
       def donation_params
-        params.require(:donation).permit(:name, :description, :photo, :requester_id, :offerer_id)
+        params.require(:donation).permit(:name, :description, :photo, :state, :requester_id, :offerer_id)
       end
     end
   end

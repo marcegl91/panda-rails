@@ -16,4 +16,4 @@ User.create(email: 'test@test.com', password: 'testtest')
 User.create(email: 'test1@test.com', password: 'testtest')
 
 Donation.create(name: 'A donation', description: 'Some text about that donation',
-                requester: User.first, offerer: User.second)
+                requester: User.first, offerer: User.second, state: 0)
