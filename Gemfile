@@ -40,6 +40,7 @@ gem 'devise_token_auth', '~> 1.1'
 gem 'active_model_serializers', '~> 0.10.9'
 gem 'wor-paginate', '~> 0.1.4'
 gem 'rack-cors'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

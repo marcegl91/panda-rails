@@ -11,6 +11,9 @@ class User < ApplicationRecord
 
   has_many :ratings
 
+  geocoded_by :address
+  reverse_geocoded_by :latitude, :longitude
+
   def score
     ratings.empty? ? 0 : ratings.average('score').round
   end
